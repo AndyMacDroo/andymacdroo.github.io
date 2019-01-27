@@ -69,3 +69,7 @@ main > .tagline {
 	width: 2.65rem;
 	height: 2.65rem;
 }
+
+.img-border {
+	border: 8px solid #fff;
+}
