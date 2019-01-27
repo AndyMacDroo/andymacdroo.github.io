@@ -72,4 +72,5 @@ main > .tagline {
 
 .img-border {
 	border: 8px solid #fff;
+	box-shadow: 6px 6px 6px #0000002e;
 }
