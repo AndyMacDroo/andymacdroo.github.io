@@ -1,0 +1,30 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.titleText {
+  font-family: 'Reem Kufi', sans-serif;
+  font-weight: 600;
+  color: black;
+}
+
+.icons-social, a {
+  padding: 20px;
+  font-size: 30px;
+  -webkit-transition: text-shadow 0.2s linear;
+  -moz-transition: text-shadow 0.2s linear;
+  -ms-transition: text-shadow 0.2s linear;
+  -o-transition: text-shadow 0.2s linear;
+  transition: text-shadow 0.2s linear;
+  text-shadow: none;
+}
+
+.icons-social, a:hover {
+    color: #4d9cd7 !important;
+    text-shadow: 1px 0px 20px #4d9cd7;
+}
+
+.tech-skills, div {
+  margin: 5px;
+  font-size: 30px;
+}
