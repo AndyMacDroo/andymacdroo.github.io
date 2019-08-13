@@ -10,7 +10,7 @@ class SectionTitle extends React.Component {
     return (
       <div>
         {shouldShow &&
-          <div style={{ fontSize: titleFontSize, textAlign: 'center' }} className="titleText">
+          <div style={{ fontSize: titleFontSize, textAlign: 'center', position: 'relative' }} className="titleText noselect">
             {titleText}
           </div>}
       </div>);
@@ -19,7 +19,7 @@ class SectionTitle extends React.Component {
 
 SectionTitle.defaultProps = {
   shouldShow: true,
-  titleText: "👋 Hey, I'm Andy Macdonald.",
+  titleText: "Hey, I'm Andy Macdonald",
   titleFontSize: '1.75em'
 }
 

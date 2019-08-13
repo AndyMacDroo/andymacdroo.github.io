@@ -1,42 +1,68 @@
-/* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
 import '../App.css';
 import PropTypes from 'prop-types';
-import SectionTitle from './SectionTitle';
-import Zoom from "@material-ui/core/Zoom/Zoom";
+import Particles from 'react-particles-js';
 
-const TITLE_FONT_SIZE = 20;
 
 class TechSkills extends React.Component {
 
   render() {
-    const { shouldShow, techSkills, defaultSize } = this.props;
-    return (
-      <div style={{ marginLeft: 'auto' }} >
-        {shouldShow && <div>
-          <div class="tech-skills" style={{ display: 'inline-flex' }}>
-            {["Languages", "Tooling", "Frameworks", "Cloud", "Testing", "OS", "Databases"].map((sectionValue, sectionIndex) => {
-              return (<div>
-                <div>
-                  <SectionTitle titleFontSize={TITLE_FONT_SIZE} titleText={sectionValue} />
-                  {
-                    techSkills.filter(value => value.type === sectionValue).map((value, index) => {
-                      return <div>
-                        <Zoom in style={{ transitionDelay: `${40 * (index + 10*sectionIndex)}ms` }}>
-                          <div  style={{ textAlign: 'center' }} >
-                            <img src={value.url} alt={value.name} style={{ margin: '3px', height: `${defaultSize}px` }} />
-                            <SectionTitle titleFontSize={16} titleText={value.name} />
-                          </div>
-                        </Zoom>
-                      </div>
-                    })
-                  }
-                </div>
-              </div>)
-            })}
-          </div>
-        </div>}
-      </div>);
+    const { techSkills } = this.props;
+    let techSkillsMapped = techSkills.map(skill => ({ src: skill.url, height: 60, width: 60 }));
+    return (<Particles
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        height: '200px',
+        background: 'white',
+        opacity: 0.6
+      }}
+      params={{
+        "particles": {
+          "number": {
+            "value": techSkillsMapped.length
+          },
+          "line_linked": {
+            "enable": false
+          },
+          "move": {
+            "speed": 6,
+            "out_mode": "out"
+          },
+          "shape": {
+            "type": [
+              "images"
+            ],
+            "images": techSkillsMapped
+          },
+          "size": {
+            "value": 35,
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": 8,
+              "size_min": 30,
+              "sync": false
+            }
+          }
+        },
+        "interactivity": {
+          "events": {
+            "onclick": {
+              "enable": true,
+              "mode": "repulse"
+            }
+          },
+          "modes": {
+            "repulse": {
+              "distance": 300,
+              "duration": 2
+            }
+          }
+        },
+        "retina_detect": false
+      }} />);
   }
 }
 
@@ -120,13 +146,33 @@ TechSkills.defaultProps = {
       type: 'Tooling'
     },
     {
+      url: "images/aws.png",
+      name: 'AWS',
+      type: 'Cloud'
+    },
+    {
       url: "images/fabric8.png",
       name: 'Fabric8',
       type: 'Tooling'
     },
     {
+      url: "images/yeoman.png",
+      name: 'Yeoman',
+      type: 'Tooling'
+    },
+    {
+      url: "images/tomcat.png",
+      name: 'Tomcat',
+      type: 'Tooling'
+    },
+    {
       url: "images/spring.png",
       name: 'Spring',
+      type: 'Frameworks'
+    },
+    {
+      url: "images/symfony.png",
+      name: 'Symfony',
       type: 'Frameworks'
     },
     {
@@ -165,6 +211,11 @@ TechSkills.defaultProps = {
       type: 'Tooling'
     },
     {
+      url: "images/gruntjs.png",
+      name: 'GruntJS',
+      type: 'Tooling'
+    },
+    {
       url: "images/maven.png",
       name: 'Maven',
       type: 'Tooling'
@@ -200,7 +251,7 @@ TechSkills.defaultProps = {
       type: 'Cloud'
     },
     {
-      url: "images/apigateway.svg",
+      url: "images/apigateway.png",
       name: 'API Gateway',
       type: 'Cloud'
     },
@@ -220,7 +271,7 @@ TechSkills.defaultProps = {
       type: 'Cloud'
     },
     {
-      url: "images/angular.svg",
+      url: "images/angular.png",
       name: 'Angular',
       type: 'Frameworks'
     },
@@ -265,13 +316,28 @@ TechSkills.defaultProps = {
       type: 'Testing'
     },
     {
-      url: "images/cucumber.png",
-      name: 'Cucumber',
-      type: 'Testing'
+      url: "images/intelliJ.png",
+      name: 'intelliJ',
+      type: 'Tooling'
+    },
+    {
+      url: "images/pycharm.png",
+      name: 'PyCharm',
+      type: 'Tooling'
+    },
+    {
+      url: "images/vscode.png",
+      name: 'VSCode',
+      type: 'Tooling'
     },
     {
       url: "images/linux.png",
       name: 'Linux',
+      type: 'OS'
+    },
+    {
+      url: "images/raspberrypi.png",
+      name: 'Raspberry Pi',
       type: 'OS'
     },
     {

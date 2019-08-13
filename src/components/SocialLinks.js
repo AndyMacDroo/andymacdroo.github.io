@@ -8,7 +8,7 @@ class SocialLinks extends React.Component {
   render() {
     const { shouldShow, socialLinks, color } = this.props;
     return (
-      <div style={{ marginLeft: 'auto'}} >
+      <div style={{ marginLeft: 'auto', position: 'relative'}} >
         {shouldShow && <div>
           <div class="icons-social">
             {

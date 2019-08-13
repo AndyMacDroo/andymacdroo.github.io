@@ -9,7 +9,7 @@ body {
 }
 
 .icons-social, a {
-  padding: 20px;
+  padding: 10px;
   font-size: 30px;
   -webkit-transition: text-shadow 0.2s linear;
   -moz-transition: text-shadow 0.2s linear;
@@ -27,4 +27,14 @@ body {
 .tech-skills, div {
   margin: 5px;
   font-size: 30px;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }

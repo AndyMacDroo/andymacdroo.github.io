@@ -8,7 +8,7 @@ class SectionImage extends React.Component {
   render() {
     const { shouldShow, imageHeight, imageSrc } = this.props;
     return (
-      <div  style={{ textAlign: 'center' }} >
+      <div  className="noselect" style={{ textAlign: 'center', position: 'relative' }} >
         { shouldShow && <div>
           <img src={`${imageSrc}`} alt="section" style={{ height: `${imageHeight}px` }} />
         </div>}
