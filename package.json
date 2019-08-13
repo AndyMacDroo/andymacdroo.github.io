@@ -11,8 +11,7 @@
     "react-dom": "^16.8.6",
     "react-json-editor-viewer": "^1.0.6",
     "react-particles-js": "2.7.0",
-    "react-scripts": "3.0.1",
-    "react-vis-network": "^1.0.0"
+    "react-scripts": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
