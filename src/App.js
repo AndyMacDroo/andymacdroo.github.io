@@ -83,7 +83,9 @@ class App extends React.Component {
           <div style={{ position: 'relative', marginTop: '20%', height: 'auto' }}>
             <TechSkills />
             <SectionImage />
-            {this.getIntroText()}
+            <Zoom in={this.state.scrollPosition < 0.18}>
+              {this.getIntroText()}
+            </Zoom>
             <Divider />
             <ButtonGroup size="small">
               <Button onClick={this.displayConfetti} style={{ height: '40px', textTransform: 'none', background: 'white' }} variant="outlined" href="mailto:hello@andymacdonald.dev">
@@ -93,6 +95,10 @@ class App extends React.Component {
               </Button>
               <Button style={{ height: '40px', textTransform: 'none', background: 'white' }} variant="outlined" target="_blank" href="https://github.com/AndyMacDroo">
                 <i class="fab fa-github"></i>
+                <SectionTitle titleText="@AndyMacDroo" titleFontSize="12px" />
+              </Button>
+              <Button style={{ height: '40px', textTransform: 'none', background: 'white' }} variant="outlined" target="_blank" href="https://medium.com/@AndyMacDroo">
+                <i class="fab fa-medium"></i>
                 <SectionTitle titleText="@AndyMacDroo" titleFontSize="12px" />
               </Button>
             </ButtonGroup>

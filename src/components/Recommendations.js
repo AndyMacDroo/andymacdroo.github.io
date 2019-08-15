@@ -20,19 +20,20 @@ class Recommendations extends React.Component {
       <div>
         {this.getRecommendationsTitle()}
         <Grid container
+          style={{ flexGrow: 1 }}
           direction="row"
-          justify="space-around"
+          justify="space-evenly"
           alignItems="stretch">
           {
             recommendations.map((recommendation) => {
-              return (<Grid item md={6} xs={12} spacing={4}>
+              return (<Grid item md={6} xs={12} lg={3} spacing={4}>
                 <Card className="noselect">
-                  <CardContent style={{ minHeight: '130px' }}>
+                  <CardContent style={{ minHeight: '200px' }}>
                     <div className="titleText" style={{ fontSize: '16px', fontWeight: 300, display: 'flex' }}>
                       <i><i className="big-quote">"</i>{recommendation.extractMessage}<i className="big-quote">"</i></i>
                     </div>
                   </CardContent>
-                  <CardActions style={{ marginTop: '-30px' }}><Avatar src={recommendation.avatarUrl} />
+                  <CardActions><Avatar src={recommendation.avatarUrl} />
                     <div className="titleText" style={{ fontSize: '14px' }}>
                       {recommendation.role}
                     </div>
@@ -69,14 +70,14 @@ Recommendations.defaultProps = {
       extractMessage: 'He is an unparalleled combination of exceptional technically as a developer, mentor, leader and extremely humble n supportive at the same time. He will be a great asset to any company he chooses to be with.'
     },
     {
-      role: 'Head of Product',
-      avatarUrl: 'images/marc.jpeg',
-      extractMessage: 'Andrew is an incredibly talented developer. He and I took ownership of a project that was failing and quickly turned it around. Andrew is a full stack developer for which he is technically very strong. However, for me, his real strengths include solving very complex problems and being passionate about the user, frequently working above and beyond to ensure that real value has been delivered.'
-    },
-    {
       role: 'Scrum Master',
       avatarUrl: 'images/paul.jpeg',
-      extractMessage: 'Andrew came into the business as a junior, but quickly proved himself to be capable way beyond what he was brought in to do. So, he quickly found himself leading a Scrum team, a central member of the Development Leadership Team, and a major contributor to many important projects and initiatives. His technical ability is well recognised, but for me, what really impressed me about Andrew was his natural ability to lead and mentor his team members - even those that could be considered more senior.'
+      extractMessage: 'Andrew came into the business as a junior, but quickly proved himself to be capable way beyond what he was brought in to do. So, he quickly found himself leading a Scrum team, a central member of the Development Leadership Team, and a major contributor to many important projects and initiatives. For me, what really impressed me about Andrew was his natural ability to lead and mentor his team members.'
+    },
+    {
+      role: 'Head of Product',
+      avatarUrl: 'images/marc.jpeg',
+      extractMessage: 'Andrew I took ownership of a project that was failing and quickly turned it around. Andrew is a full stack developer for which he is technically very strong. However, for me, his real strengths include solving very complex problems and being passionate about the user, frequently working above and beyond to ensure that real value has been delivered.'
     },
     {
       role: 'Data Analyst',
