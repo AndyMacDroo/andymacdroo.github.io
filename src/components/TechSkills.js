@@ -15,8 +15,8 @@ class TechSkills extends React.Component {
         top: 0,
         left: 0,
         height: '200px',
-        background: 'white',
-        opacity: 0.6
+        background: 'radial-gradient(#fff, #4d9cd7)',
+        opacity: 0.56
       }}
       params={{
         "particles": {
@@ -49,15 +49,15 @@ class TechSkills extends React.Component {
         },
         "interactivity": {
           "events": {
-            "onclick": {
+            "onhover": {
               "enable": true,
               "mode": "repulse"
             }
           },
           "modes": {
             "repulse": {
-              "distance": 300,
-              "duration": 2
+              "distance": 100,
+              "duration": 0
             }
           }
         },

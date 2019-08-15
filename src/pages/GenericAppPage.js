@@ -3,7 +3,7 @@ import '../App.css';
 import { withStyles } from '@material-ui/styles';
 import PropTypes from 'prop-types';
 import AppBar from '../components/AppBar';
-import { Container, Paper } from '@material-ui/core';
+import { Container } from '@material-ui/core';
 
 const styles = theme => ({
   root: {

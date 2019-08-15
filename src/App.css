@@ -10,13 +10,19 @@ body {
 
 .icons-social, a {
   padding: 10px;
-  font-size: 30px;
+  font-size: 23px;
   -webkit-transition: text-shadow 0.2s linear;
   -moz-transition: text-shadow 0.2s linear;
   -ms-transition: text-shadow 0.2s linear;
   -o-transition: text-shadow 0.2s linear;
   transition: text-shadow 0.2s linear;
   text-shadow: none;
+}
+
+.big-quote {
+  color: #4d9cd7 !important;
+  font-weight: 800;
+  font-family: initial
 }
 
 .icons-social, a:hover {
@@ -29,6 +35,10 @@ body {
   font-size: 30px;
 }
 
+.title-card {
+  min-height: 120px;
+}
+
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -37,4 +47,37 @@ body {
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  50% {
+    opacity: .8;
+    transform: scale(.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+.chevron {
+  animation: fade-slide-up 1s 1s ease-out forwards,
+  pulse 2s 3s ease-out infinite;
+opacity: 0;
 }

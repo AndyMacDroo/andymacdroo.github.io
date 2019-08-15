@@ -8,7 +8,9 @@
     "@types/storybook__react": "^4.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-device-detect": "^1.7.5",
     "react-dom": "^16.8.6",
+    "react-dom-confetti": "^0.1.1",
     "react-json-editor-viewer": "^1.0.6",
     "react-particles-js": "2.7.0",
     "react-scripts": "3.0.1"

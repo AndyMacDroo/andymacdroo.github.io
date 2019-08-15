@@ -43,10 +43,6 @@ SocialLinks.defaultProps = {
       fontAwesomeIcon: 'fa fa-envelope'
     },
     {
-      url: "https://dev.to/AndyMacDroo",
-      fontAwesomeIcon: 'fab fa-dev'
-    },
-    {
       url: "https://medium.com/@AndyMacDroo",
       fontAwesomeIcon: 'fab fa-medium'
     }

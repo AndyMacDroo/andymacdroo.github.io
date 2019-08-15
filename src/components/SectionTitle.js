@@ -5,12 +5,13 @@ import PropTypes from 'prop-types';
 
 class SectionTitle extends React.Component {
 
+
   render() {
     const { shouldShow, titleText, titleFontSize } = this.props;
     return (
       <div>
         {shouldShow &&
-          <div style={{ fontSize: titleFontSize, textAlign: 'center', position: 'relative' }} className="titleText noselect">
+          <div style={{ fontSize: titleFontSize, textAlign: 'center', position: 'relative' }} className={`titleText noselect`}>
             {titleText}
           </div>}
       </div>);
@@ -20,13 +21,13 @@ class SectionTitle extends React.Component {
 SectionTitle.defaultProps = {
   shouldShow: true,
   titleText: "Hey, I'm Andy Macdonald",
-  titleFontSize: '1.75em'
+  titleFontSize: '1.35em',
 }
 
 SectionTitle.propTypes = {
   shouldShow: PropTypes.bool,
   titleText: PropTypes.string,
-  titleFontSize: PropTypes.string
+  titleFontSize: PropTypes.string,
 }
 
 export default SectionTitle;
