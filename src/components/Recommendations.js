@@ -23,7 +23,7 @@ class Recommendations extends React.Component {
           style={{ flexGrow: 1 }}
           direction="row"
           justify="space-evenly"
-          alignItems="stretch">
+          alignItems="center">
           {
             recommendations.map((recommendation) => {
               return (<Grid item md={6} xs={12} lg={3} spacing={4}>

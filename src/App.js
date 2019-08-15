@@ -28,7 +28,7 @@ class App extends React.Component {
   }
 
   scrollToMyRef = () => window.scrollTo({
-    top: this.state.scrollPosition < 0.18 ? this.getScrollPosition() : 20,
+    top: this.state.scrollPosition < 0.18 ? this.getScrollPosition() : 1,
     behavior: 'smooth'
   })
 
@@ -82,27 +82,27 @@ class App extends React.Component {
         <GenericAppPage>
           <div style={{ position: 'relative', marginTop: '20%', height: 'auto' }}>
             <TechSkills />
-            <SectionImage />
             <Zoom in={this.state.scrollPosition < 0.18}>
-              {this.getIntroText()}
+              <div>
+                <SectionImage />
+                {this.getIntroText()}
+              </div>
             </Zoom>
             <Divider />
-            <ButtonGroup size="small">
-              <Button onClick={this.displayConfetti} style={{ height: '40px', textTransform: 'none', background: 'white' }} variant="outlined" href="mailto:hello@andymacdonald.dev">
-                <i class="fa fa-envelope"></i>
-                <Confetti active={this.state.displayConfetti} />
-                <SectionTitle titleText={this.state.contactText} titleFontSize="12px" />
-              </Button>
-              <Button style={{ height: '40px', textTransform: 'none', background: 'white' }} variant="outlined" target="_blank" href="https://github.com/AndyMacDroo">
-                <i class="fab fa-github"></i>
-                <SectionTitle titleText="@AndyMacDroo" titleFontSize="12px" />
-              </Button>
-              <Button style={{ height: '40px', textTransform: 'none', background: 'white' }} variant="outlined" target="_blank" href="https://medium.com/@AndyMacDroo">
-                <i class="fab fa-medium"></i>
-                <SectionTitle titleText="@AndyMacDroo" titleFontSize="12px" />
-              </Button>
-            </ButtonGroup>
-            <div style={{ position: 'relative', fontSize: '38px', marginTop: isMobile ? '40px' : '120px' }}>
+            <Button onClick={this.displayConfetti} style={{ height: '40px', textTransform: 'none', background: 'white', minWidth: '180px', margin: '2px' }} variant="outlined" href="mailto:hello@andymacdonald.dev">
+              <i class="fa fa-envelope"></i>
+              <Confetti active={this.state.displayConfetti} />
+              <SectionTitle titleText={this.state.contactText} titleFontSize="12px" />
+            </Button>
+            <Button style={{ height: '40px', textTransform: 'none', background: 'white', minWidth: '180px', margin: '2px' }} variant="outlined" target="_blank" href="https://github.com/AndyMacDroo">
+              <i class="fab fa-github"></i>
+              <SectionTitle titleText="@AndyMacDroo" titleFontSize="12px" />
+            </Button>
+            <Button style={{ height: '40px', textTransform: 'none', background: 'white', minWidth: '180px', margin: '2px' }} variant="outlined" target="_blank" href="https://medium.com/@AndyMacDroo">
+              <i class="fab fa-medium"></i>
+              <SectionTitle titleText="@AndyMacDroo" titleFontSize="12px" />
+            </Button>
+            <div style={{ position: 'relative', fontSize: '38px', marginTop: isMobile ? '20px' : '70px' }}>
               <Zoom in>
                 <div style={{ width: '100%' }} className="chevron" onClick={() => this.scrollToMyRef()}>
                   <SectionTitle titleText={this.state.scrollPosition < 0.18 ? "What people say about me" : ""} titleFontSize="16px" />
@@ -111,7 +111,7 @@ class App extends React.Component {
               </Zoom>
             </div>
             <div style={{ marginLeft: '-30px' }}>
-              <Zoom in={this.state.scrollPosition > 0.10}>
+              <Zoom in={this.state.scrollPosition > 0.10 || isMobile}>
                 <div style={{ position: 'relative', marginTop: '0px', marginLeft: '30px' }}>
                   <Recommendations />
                 </div>
