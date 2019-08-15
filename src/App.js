@@ -5,7 +5,7 @@ import SectionImage from './components/SectionImage';
 import SectionTitle from './components/SectionTitle';
 import GenericAppPage from './pages/GenericAppPage';
 import Confetti from 'react-dom-confetti';
-import { Button, ButtonGroup, Divider } from '@material-ui/core';
+import { Button, Divider } from '@material-ui/core';
 import { Zoom } from '@material-ui/core';
 import Recommendations from './components/Recommendations';
 import { isMobile } from 'react-device-detect';
@@ -82,7 +82,7 @@ class App extends React.Component {
         <GenericAppPage>
           <div style={{ position: 'relative', marginTop: '20%', height: 'auto' }}>
             <TechSkills />
-            <Zoom in={this.state.scrollPosition < 0.18}>
+            <Zoom in={this.state.scrollPosition < 0.70}>
               <div>
                 <SectionImage />
                 {this.getIntroText()}
@@ -105,8 +105,8 @@ class App extends React.Component {
             <div style={{ position: 'relative', fontSize: '38px', marginTop: isMobile ? '20px' : '70px' }}>
               <Zoom in>
                 <div style={{ width: '100%' }} className="chevron" onClick={() => this.scrollToMyRef()}>
-                  <SectionTitle titleText={this.state.scrollPosition < 0.18 ? "What people say about me" : ""} titleFontSize="16px" />
-                  <i className={this.state.scrollPosition < 0.18 ? "fas fa-chevron-down" : "fas fa-chevron-up"}></i>
+                  <SectionTitle titleText={this.state.scrollPosition < 0.20 ? "What people say about me" : ""} titleFontSize="16px" />
+                  <i className={this.state.scrollPosition < 0.20 ? "fas fa-chevron-down" : "fas fa-chevron-up"}></i>
                 </div>
               </Zoom>
             </div>
