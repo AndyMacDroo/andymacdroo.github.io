@@ -9,6 +9,7 @@ import { Button, Divider } from '@material-ui/core';
 import { Zoom } from '@material-ui/core';
 import Recommendations from './components/Recommendations';
 import { isMobile } from 'react-device-detect';
+import ReactGA from 'react-ga';
 
 const contactMeText = 'Contact Me';
 
@@ -21,6 +22,7 @@ class App extends React.Component {
       contactText: contactMeText,
       displayConfetti: false
     }
+    ReactGA.initialize('UA-145826557-1');
   }
 
   getScrollPosition = () => {
@@ -77,6 +79,7 @@ class App extends React.Component {
   }
 
   render() {
+    ReactGA.pageview(window.location.pathname + window.location.search);
     return (
       <div className="App">
         <GenericAppPage>

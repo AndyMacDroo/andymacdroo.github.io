@@ -11,6 +11,7 @@
     "react-device-detect": "^1.7.5",
     "react-dom": "^16.8.6",
     "react-dom-confetti": "^0.1.1",
+    "react-ga": "^2.6.0",
     "react-json-editor-viewer": "^1.0.6",
     "react-particles-js": "2.7.0",
     "react-scripts": "3.0.1"
