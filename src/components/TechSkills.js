@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 import PropTypes from 'prop-types';
 import Particles from 'react-particles-js';
-
+import { isMobile } from 'react-device-detect';
 
 class TechSkills extends React.Component {
 
@@ -15,8 +15,8 @@ class TechSkills extends React.Component {
         top: 0,
         left: 0,
         height: '200px',
-        background: 'radial-gradient(#fff, #4d9cd7)',
-        opacity: 0.56
+        background: '-webkit-linear-gradient(150deg, #34ADFF 35%, #4CBFFF 35%)',
+        opacity: 1
       }}
       params={{
         "particles": {
@@ -37,12 +37,12 @@ class TechSkills extends React.Component {
             "images": techSkillsMapped
           },
           "size": {
-            "value": 35,
+            "value": isMobile ? 20 : 35,
             "random": true,
             "anim": {
               "enable": true,
               "speed": 8,
-              "size_min": 30,
+              "size_min": isMobile ? 10 : 30,
               "sync": false
             }
           }

@@ -24,7 +24,7 @@ class App extends React.Component {
   }
 
   getScrollPosition = () => {
-    return isMobile ? 500 : 2000
+    return isMobile ? 480 : 2000
   }
 
   scrollToMyRef = () => window.scrollTo({
@@ -41,13 +41,13 @@ class App extends React.Component {
   getIntroText = () => {
     if (isMobile) {
       return <div className="titleText" style={{ position: 'relative' }}>
-        <b style={{ color: 'black' }}>Andy Macdonald</b>
+        <b style={{ color: 'white' }}>Andy Macdonald</b>
         <SectionTitle titleText="Full Stack Software Engineer" titleFontSize="16px" />
       </div>
     }
     return (<div style={{ width: '100%' }}>
       <div style={{ position: 'relative', fontWeight: 300, marginBottom: '-11px', userSelect: 'none' }}
-        className="titleText">Hey, I'm <b style={{ color: 'lightskyblue' }}>Andy Macdonald</b></div>
+        className="titleText">Hey, I'm <b style={{ color: 'white' }}>Andy Macdonald</b></div>
       <SectionTitle titleText="Full Stack Software Engineer" />
     </div>)
   }
@@ -89,30 +89,29 @@ class App extends React.Component {
               </div>
             </Zoom>
             <Divider />
-            <Button onClick={this.displayConfetti} style={{ height: '40px', textTransform: 'none', background: 'white', minWidth: '180px', margin: '2px' }} variant="outlined" href="mailto:hello@andymacdonald.dev">
-              <i class="fa fa-envelope"></i>
+            <Button onClick={this.displayConfetti} style={{ height: '40px', textTransform: 'none', minWidth: '180px', margin: '2px' }} variant="outlined" href="mailto:hello@andymacdonald.dev">
+              <i class="fa fa-envelope"></i> <p className="buttonText">{this.state.contactText}</p>
               <Confetti active={this.state.displayConfetti} />
-              <SectionTitle titleText={this.state.contactText} titleFontSize="12px" />
             </Button>
-            <Button style={{ height: '40px', textTransform: 'none', background: 'white', minWidth: '180px', margin: '2px' }} variant="outlined" target="_blank" href="https://github.com/AndyMacDroo">
-              <i class="fab fa-github"></i>
-              <SectionTitle titleText="@AndyMacDroo" titleFontSize="12px" />
+            <Button style={{ height: '40px', textTransform: 'none', minWidth: '180px', margin: '2px' }} variant="outlined" target="_blank" href="https://github.com/AndyMacDroo">
+              <i class="fab fa-github"></i><p className="buttonText">@AndyMacDroo</p>
+
             </Button>
-            <Button style={{ height: '40px', textTransform: 'none', background: 'white', minWidth: '180px', margin: '2px' }} variant="outlined" target="_blank" href="https://medium.com/@AndyMacDroo">
-              <i class="fab fa-medium"></i>
-              <SectionTitle titleText="@AndyMacDroo" titleFontSize="12px" />
+            <Button style={{ height: '40px', textTransform: 'none', minWidth: '180px', margin: '2px' }} variant="outlined" target="_blank" href="https://medium.com/@AndyMacDroo">
+              <i class="fab fa-medium"></i><p className="buttonText">@AndyMacDroo</p>
             </Button>
             <div style={{ position: 'relative', fontSize: '38px', marginTop: isMobile ? '20px' : '70px' }}>
-              <Zoom in>
+              {!isMobile && <Zoom in>
                 <div style={{ width: '100%' }} className="chevron" onClick={() => this.scrollToMyRef()}>
                   <SectionTitle titleText={this.state.scrollPosition < 0.20 ? "What people say about me" : ""} titleFontSize="16px" />
                   <i className={this.state.scrollPosition < 0.20 ? "fas fa-chevron-down" : "fas fa-chevron-up"}></i>
                 </div>
               </Zoom>
+              }
             </div>
             <div style={{ marginLeft: '-30px' }}>
-              <Zoom in={this.state.scrollPosition > 0.10 || isMobile}>
-                <div style={{ position: 'relative', marginTop: '0px', marginLeft: '30px' }}>
+              <Zoom in={this.state.scrollPosition > 0.10 || (isMobile && this.state.scrollPosition > 0.03)}>
+                <div style={{ position: 'relative', marginTop: isMobile ? '30px' : '0px', marginLeft: '30px' }}>
                   <Recommendations />
                 </div>
               </Zoom>

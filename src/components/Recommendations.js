@@ -26,9 +26,9 @@ class Recommendations extends React.Component {
           alignItems="center">
           {
             recommendations.map((recommendation) => {
-              return (<Grid item md={6} xs={12} lg={3} spacing={4}>
-                <Card className="noselect">
-                  <CardContent style={{ minHeight: '200px' }}>
+              return (<Grid item md={6} xs={12} lg={6} spacing={4}>
+                <Card className="card-recommendation noselect">
+                  <CardContent style={{ minHeight: '140px' }}>
                     <div className="titleText" style={{ fontSize: '16px', fontWeight: 300, display: 'flex' }}>
                       <i><i className="big-quote">"</i>{recommendation.extractMessage}<i className="big-quote">"</i></i>
                     </div>

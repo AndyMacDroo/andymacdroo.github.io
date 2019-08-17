@@ -8,6 +8,13 @@ body {
   color: black;
 }
 
+.buttonText {
+  font-family: 'Reem Kufi', sans-serif;
+  margin-left: 5px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
 .icons-social, a {
   padding: 10px;
   font-size: 23px;
@@ -25,10 +32,11 @@ body {
   font-family: initial
 }
 
-.icons-social, a:hover {
-    color: #4d9cd7 !important;
-    text-shadow: 1px 0px 20px #4d9cd7;
+a:hover {
+  color: #fff !important;
+  text-shadow: 1px 0px 20px #fff;
 }
+
 
 .tech-skills, div {
   margin: 5px;
@@ -47,6 +55,10 @@ body {
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
+}
+
+.card-recommendation {
+  background-image: -webkit-linear-gradient(150deg, #f1faff 35%, #ffffff 35%);
 }
 
 @keyframes pulse {

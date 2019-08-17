@@ -5,6 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import PropTypes from 'prop-types';
 import SocialLinks from './SocialLinks';
 import { Zoom } from '@material-ui/core';
+import { isMobile } from 'react-device-detect';
 
 class AppBar extends React.Component {
 
@@ -45,7 +46,7 @@ class AppBar extends React.Component {
         {this.props.shouldShow && <MaterialUIAppBar elevation="elevation0" position="fixed" color="default"
           style={{ backgroundColor: 'transparent', color: '#4e4e4e' }}>
           <Toolbar>
-            <Zoom in={this.state.scrollPosition < 0.10}>
+            <Zoom in={this.state.scrollPosition < 0.10 || (isMobile && this.state.scrollPosition < 0.001)}>
               <div style={{ marginLeft: 'auto', display: 'flex' }}>
                 <SocialLinks />
               </div>
