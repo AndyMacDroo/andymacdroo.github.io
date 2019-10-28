@@ -39,7 +39,7 @@ SocialLinks.defaultProps = {
       fontAwesomeIcon: 'fab fa-twitter'
     },
     {
-      url: "mailto:hello@AndyMacDroo.me",
+      url: "mailto:hello@AndyMacdonald.dev",
       fontAwesomeIcon: 'fa fa-envelope'
     },
     {

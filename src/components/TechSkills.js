@@ -3,13 +3,14 @@ import '../App.css';
 import PropTypes from 'prop-types';
 import Particles from 'react-particles-js';
 import { isMobile } from 'react-device-detect';
+import { Zoom } from '@material-ui/core';
 
 class TechSkills extends React.Component {
 
   render() {
     const { techSkills } = this.props;
     let techSkillsMapped = techSkills.map(skill => ({ src: skill.url, height: 60, width: 60 }));
-    return (<Particles
+    return (<Zoom in><Particles
       style={{
         position: 'fixed',
         top: 0,
@@ -62,7 +63,7 @@ class TechSkills extends React.Component {
           }
         },
         "retina_detect": false
-      }} />);
+      }} /></Zoom>);
   }
 }
 

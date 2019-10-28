@@ -9,8 +9,8 @@ class Recommendations extends React.Component {
 
   getRecommendationsTitle() {
     return (<div style={{ display: 'flex', position: 'relative' }}>
-      <i style={{ marginTop: '16px' }} class="fab fa-linkedin"></i>
-      <SectionTitle titleText="Recommendations" titleFontSize="30px" />
+      <i style={{ marginTop: '12px', color: 'white', fontSize: '20px' }} class="fab fa-linkedin"></i>
+      <SectionTitle titleText="RECOMMENDATIONS" titleFontSize="20px" />
     </div>);
   }
 
@@ -29,12 +29,12 @@ class Recommendations extends React.Component {
               return (<Grid item md={6} xs={12} lg={6} spacing={4}>
                 <Card className="card-recommendation noselect">
                   <CardContent style={{ minHeight: '140px' }}>
-                    <div className="titleText" style={{ fontSize: '16px', fontWeight: 300, display: 'flex' }}>
+                    <div style={{ fontSize: '25px', fontWeight: 300, display: 'flex' }}>
                       <i><i className="big-quote">"</i>{recommendation.extractMessage}<i className="big-quote">"</i></i>
                     </div>
                   </CardContent>
                   <CardActions><Avatar src={recommendation.avatarUrl} />
-                    <div className="titleText" style={{ fontSize: '14px' }}>
+                    <div className="card-recommendation" style={{ fontSize: '20px', fontWeight: 600 }}>
                       {recommendation.role}
                     </div>
                   </CardActions>

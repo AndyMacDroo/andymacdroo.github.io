@@ -11,7 +11,7 @@ class SectionTitle extends React.Component {
     return (
       <div>
         {shouldShow &&
-          <div style={{ fontSize: titleFontSize, textAlign: 'center', position: 'relative' }} className={`titleText noselect`}>
+          <div style={{ fontFamily: 'Arvo', fontSize: titleFontSize, textAlign: 'center', position: 'relative', color: 'white' }} className={`titleText noselect`}>
             {titleText}
           </div>}
       </div>);

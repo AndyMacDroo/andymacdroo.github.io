@@ -41,16 +41,14 @@ class App extends React.Component {
   }
 
   getIntroText = () => {
-    if (isMobile) {
-      return <div className="titleText" style={{ position: 'relative' }}>
-        <b style={{ color: 'white' }}>Andy Macdonald</b>
-        <SectionTitle titleText="Full Stack Software Engineer" titleFontSize="16px" />
+    return (<div style={isMobile ? { width: '100%', zoom: 0.6 } : { width: '100%' }}>
+      <div class="plate noselect">
+        <p class="script"><span>Hello, I'm</span></p>
+        <p class="shadow text1">ANDY</p>
+        <p class="shadow text2"></p>
+        <p class="shadow text3">MACDONALD</p>
+        <p class="bottom-script"><span>Software Engineer</span></p>
       </div>
-    }
-    return (<div style={{ width: '100%' }}>
-      <div style={{ position: 'relative', fontWeight: 300, marginBottom: '-11px', userSelect: 'none' }}
-        className="titleText">Hey, I'm <b style={{ color: 'white' }}>Andy Macdonald</b></div>
-      <SectionTitle titleText="Full Stack Software Engineer" />
     </div>)
   }
 
@@ -83,7 +81,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <GenericAppPage>
-          <div style={{ position: 'relative', marginTop: '20%', height: 'auto' }}>
+          <div style={{ position: 'relative', marginTop: `${isMobile ? '25%' : '10%'}`, height: 'auto' }}>
             <TechSkills />
             <Zoom in={this.state.scrollPosition < 0.70}>
               <div>
@@ -92,21 +90,22 @@ class App extends React.Component {
               </div>
             </Zoom>
             <Divider />
-            <Button onClick={this.displayConfetti} style={{ height: '40px', textTransform: 'none', minWidth: '180px', margin: '2px' }} variant="outlined" href="mailto:hello@andymacdonald.dev">
+            <div style={{ marginTop: '20px' }}></div>
+            <Button onClick={this.displayConfetti} style={{ height: '40px', textTransform: 'none', minWidth: '180px', margin: '2px', color: 'white', background: '#F44336' }} variant="outlined" href="mailto:hello@andymacdonald.dev">
               <i class="fa fa-envelope"></i> <p className="buttonText">{this.state.contactText}</p>
               <Confetti active={this.state.displayConfetti} />
             </Button>
-            <Button style={{ height: '40px', textTransform: 'none', minWidth: '180px', margin: '2px' }} variant="outlined" target="_blank" href="https://github.com/AndyMacDroo">
+            <Button style={{ height: '40px', textTransform: 'none', minWidth: '180px', margin: '2px', color: 'white', background: 'black' }} variant="outlined" target="_blank" href="https://github.com/AndyMacDroo">
               <i class="fab fa-github"></i><p className="buttonText">@AndyMacDroo</p>
 
             </Button>
-            <Button style={{ height: '40px', textTransform: 'none', minWidth: '180px', margin: '2px' }} variant="outlined" target="_blank" href="https://medium.com/@AndyMacDroo">
+            <Button style={{ height: '40px', textTransform: 'none', minWidth: '180px', margin: '2px', color: 'black !important', background: 'white' }} variant="outlined" target="_blank" href="https://medium.com/@AndyMacDroo">
               <i class="fab fa-medium"></i><p className="buttonText">@AndyMacDroo</p>
             </Button>
-            <div style={{ position: 'relative', fontSize: '38px', marginTop: isMobile ? '20px' : '70px' }}>
+            <div style={{ position: 'relative', fontSize: '38px', marginTop: isMobile ? '20px' : '50px' }}>
               {!isMobile && <Zoom in>
                 <div style={{ width: '100%' }} className="chevron" onClick={() => this.scrollToMyRef()}>
-                  <SectionTitle titleText={this.state.scrollPosition < 0.20 ? "What people say about me" : ""} titleFontSize="16px" />
+                  <SectionTitle titleText={this.state.scrollPosition < 0.20 ? "WHAT PEOPLE SAY ABOUT ME" : ""} titleFontSize="16px" />
                   <i className={this.state.scrollPosition < 0.20 ? "fas fa-chevron-down" : "fas fa-chevron-up"}></i>
                 </div>
               </Zoom>
