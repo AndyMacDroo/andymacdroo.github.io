@@ -173,8 +173,14 @@ body {
                                   supported by Chrome and Opera */
 }
 
+.beanie-font {
+  font-family:"Reenie Beanie",arial,sans-serif;
+}
+
 .card-recommendation {
   font-family:"Reenie Beanie",arial,sans-serif;
+  max-width: 500px;
+  min-width: 300px;
 }
 
 @keyframes pulse {
@@ -230,10 +236,10 @@ opacity: 0;
   background:#ccf;
 }
 
-.MuiGrid-item:nth-child(3n) .card-recommendation{
-  -o-transform:rotate(1deg);
-  -webkit-transform:rotate(1deg);
-  -moz-transform:rotate(1deg);
+.MuiGrid-item:nth-child(4n) .card-recommendation{
+  -o-transform:rotate(1.5deg);
+  -webkit-transform:rotate(1.5deg);
+  -moz-transform:rotate(1.5deg);
   position:relative;
   top:-5px;
   background:#ffc;

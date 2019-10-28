@@ -22,11 +22,11 @@ class Recommendations extends React.Component {
         <Grid container
           style={{ flexGrow: 1 }}
           direction="row"
-          justify="space-evenly"
+          justify="space-between"
           alignItems="center">
           {
             recommendations.map((recommendation) => {
-              return (<Grid item md={6} xs={12} lg={6} spacing={4}>
+              return (<Grid item md={6} xs={12} lg={4} spacing={3}>
                 <Card className="card-recommendation noselect">
                   <CardContent style={{ minHeight: '140px' }}>
                     <div style={{ fontSize: '25px', fontWeight: 300, display: 'flex' }}>
@@ -34,7 +34,7 @@ class Recommendations extends React.Component {
                     </div>
                   </CardContent>
                   <CardActions><Avatar src={recommendation.avatarUrl} />
-                    <div className="card-recommendation" style={{ fontSize: '20px', fontWeight: 600 }}>
+                    <div className="beanie-font" style={{ fontSize: '20px', fontWeight: 600 }}>
                       {recommendation.role}
                     </div>
                   </CardActions>
