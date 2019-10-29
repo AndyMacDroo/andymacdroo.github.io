@@ -17,7 +17,7 @@ class Recommendations extends React.Component {
   render() {
     const { recommendations } = this.props;
     return (
-      <div>
+      <div style={{ textAlign: '-webkit-center' }}>
         {this.getRecommendationsTitle()}
         <Grid container
           style={{ flexGrow: 1 }}
