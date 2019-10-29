@@ -96,11 +96,11 @@ class App extends React.Component {
               <Confetti active={this.state.displayConfetti} />
             </Button>
             <Button style={{ height: '40px', textTransform: 'none', minWidth: '180px', margin: '2px', color: 'white', background: 'black' }} variant="outlined" target="_blank" href="https://github.com/AndyMacDroo">
-              <i class="fab fa-github"></i><p className="buttonText">@AndyMacDroo</p>
+              <i class="fab fa-github"></i><p className="buttonText">GITHUB</p>
 
             </Button>
             <Button style={{ height: '40px', textTransform: 'none', minWidth: '180px', margin: '2px', color: 'black !important', background: 'white' }} variant="outlined" target="_blank" href="https://medium.com/@AndyMacDroo">
-              <i class="fab fa-medium"></i><p className="buttonText">@AndyMacDroo</p>
+              <i class="fab fa-medium"></i><p className="buttonText">Medium</p>
             </Button>
             <div style={{ position: 'relative', fontSize: '38px', marginTop: isMobile ? '20px' : '50px' }}>
               {!isMobile && <Zoom in>

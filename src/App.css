@@ -9,7 +9,8 @@ body {
 }
 
 .buttonText {
-  font-family: 'Reem Kufi', sans-serif;
+  font-family: Arvo;
+  text-transform: uppercase;
   margin-left: 5px;
   font-weight: 600;
   font-size: 12px;
