@@ -218,13 +218,13 @@ opacity: 0;
 }
 
 .MuiGrid-item:nth-child(even) .card-recommendation {
-
   -o-transform:rotate(4deg);
   -webkit-transform:rotate(4deg);
   -moz-transform:rotate(4deg);
   position:relative;
   top:5px;
   background:#cfc;
+  border-bottom-left-radius: 80px 10px;
 }
 
 .MuiGrid-item:nth-child(odd) .card-recommendation{
@@ -235,6 +235,49 @@ opacity: 0;
   position:relative;
   top:-5px;
   background:#ccf;
+}
+
+.MuiGrid-item:first-child .card-recommendation{
+  border-bottom-right-radius: 800px 12px;
+  border-bottom-left-radius: 60px 8px;
+}
+
+.MuiGrid-item:nth-child(2n) .card-recommendation{
+  border-top-right-radius: 60px 8px;
+}
+
+.MuiGrid-item:nth-child(3n) .card-recommendation{
+  border-bottom-right-radius: 60px 8px;
+  border-top-right-radius: 60px 8px;
+  border-top-left-radius: 60px 3px;
+  border-bottom-left-radius: 60px 3px;
+}
+
+.MuiGrid-item:nth-child(4n) .card-recommendation{
+  border-bottom-left-radius: 60px 8px;
+}
+
+.MuiGrid-item:nth-child(5n) .card-recommendation{
+  border-bottom-right-radius: 80px 6px;
+  border-bottom-left-radius: 60px 8px;
+  border-top-right-radius: 140px 12px;
+  border-top-left-radius: 60px 8px;
+}
+
+
+.MuiGrid-item:nth-child(6n) .card-recommendation{
+  border-bottom-left-radius: 120px 20px;
+}
+
+.MuiGrid-item:nth-child(7n) .card-recommendation{
+  border-bottom-right-radius: 60px 20px;
+  border-bottom-left-radius: 120px 8px;
+  border-top-left-radius: 120px 8px;
+}
+
+.MuiGrid-item:nth-child(8n) .card-recommendation{
+  border-bottom-right-radius: 60px 20px;
+  border-bottom-left-radius: 120px 8px;
 }
 
 .MuiGrid-item:nth-child(4n) .card-recommendation{

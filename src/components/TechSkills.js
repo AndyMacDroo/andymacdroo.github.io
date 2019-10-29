@@ -28,8 +28,9 @@ class TechSkills extends React.Component {
             "enable": false
           },
           "move": {
-            "speed": 6,
-            "out_mode": "out"
+            "speed": 3,
+            "out_mode": "out",
+            "direction": "top"
           },
           "shape": {
             "type": [
@@ -51,7 +52,7 @@ class TechSkills extends React.Component {
         "interactivity": {
           "events": {
             "onhover": {
-              "enable": true,
+              "enable": false,
               "mode": "repulse"
             }
           },
