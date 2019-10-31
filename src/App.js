@@ -29,10 +29,13 @@ class App extends React.Component {
     return isMobile ? 480 : 660
   }
 
-  scrollToMyRef = () => window.scrollTo({
-    top: this.state.scrollPosition < 0.18 ? this.getScrollPosition() : 1,
-    behavior: 'smooth'
-  })
+  scrollToMyRef = () => {
+    window.scrollTo({
+      top: this.state.scrollPosition < 0.73 ? this.getScrollPosition() : 1,
+      behavior: 'smooth'
+    })
+    console.log("clicked");
+  }
 
   displayConfetti = () => {
     this.setState({
@@ -102,7 +105,7 @@ class App extends React.Component {
             <Button style={{ height: '40px', textTransform: 'none', minWidth: '180px', margin: '2px', color: 'black !important', background: 'white' }} variant="outlined" target="_blank" href="https://medium.com/@AndyMacDroo">
               <i class="fab fa-medium"></i><p className="buttonText">Medium</p>
             </Button>
-            <div style={{ position: 'relative', fontSize: '38px', marginTop: isMobile ? '20px' : '50px' }}>
+            <div style={{ position: 'relative', fontSize: '38px', marginTop: isMobile ? '20px' : '50px', zIndex: '999999999' }}>
               {!isMobile && <Zoom in>
                 <div style={{ width: '100%' }} className="chevron" onClick={() => this.scrollToMyRef()}>
                   <SectionTitle titleText={this.state.scrollPosition < 0.20 ? "WHAT PEOPLE SAY ABOUT ME" : ""} titleFontSize="16px" />
