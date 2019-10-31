@@ -30,13 +30,12 @@ body {
 .big-quote {
   color: #4d9cd7 !important;
   font-weight: 800;
-  font-family:"Reenie Beanie",arial,sans-serif;
+  font-family: "Reenie Beanie", arial, sans-serif;
 }
 
 a:hover {
   text-shadow: 1px 0px 20px #fff;
 }
-
 
 .tech-skills, div {
   margin: 5px;
@@ -53,11 +52,12 @@ a:hover {
 body {
   background-color: #222;
 }
+
 .plate {
   text-align: center;
   width: 410px;
   margin-left: auto;
-    margin-right: auto;
+  margin-right: auto;
 }
 
 .arvo-font {
@@ -68,52 +68,47 @@ body {
   color: #fff;
   font-family: Arvo;
   font-weight: bold;
-  text-shadow:
-    -3px -3px 0 #4cbefc,
-    3px -3px 0 #4cbefc,
-    -3px 3px 0 #4cbefc,
-    3px 3px 0 #4cbefc,
-    4px 4px 0 #fff,
-    5px 5px 0 #fff,
-    6px 6px 0 #fff,
-    7px 7px 0 #fff;
+  text-shadow: -3px -3px 0 #4cbefc, 3px -3px 0 #4cbefc, -3px 3px 0 #4cbefc, 3px 3px 0 #4cbefc, 4px 4px 0 #36acfc, 5px 5px 0 #36acfc, 6px 6px 0 #36acfc, 7px 7px 0 #36acfc;
   line-height: 0.8em;
   letter-spacing: 0.1em;
   transform: scaleY(0.7);
   -webkit-transform: scaleY(0.7);
   -moz-transform: scaleY(0.7);
-  margin:0;
+  margin: 0;
   text-align: center;
+  letter-spacing: inherit;
 }
+
 .script {
   font-family: "Seaweed Script";
   color: #fff;
   text-align: center;
   font-size: 40px;
   position: relative;
-  margin:0;
+  margin: 0;
 }
-.script span {
 
+.script span {
   z-index: -200;
   border-radius: 30px;
   padding: 0 0.3em;
 }
+
 .script:before {
-  content:"";
+  content: "";
   display: block;
   position: absolute;
-  z-index:-1;
+  z-index: -1;
   top: 50%;
   width: 30%;
   border-bottom: 3px solid #fff;
 }
 
 .script:after {
-  content:"";
+  content: "";
   display: block;
   position: absolute;
-  z-index:-1;
+  z-index: -1;
   top: 50%;
   width: 30%;
   right: 0;
@@ -126,7 +121,7 @@ body {
   text-align: center;
   font-size: 40px;
   position: relative;
-  margin:0;
+  margin: 0;
 }
 
 .bottom-script span {
@@ -134,20 +129,20 @@ body {
 }
 
 .bottom-script:before {
-  content:"";
+  content: "";
   display: block;
   position: absolute;
-  z-index:-1;
+  z-index: -1;
   top: 50%;
   width: 15%;
   border-bottom: 3px solid #fff;
 }
 
 .bottom-script:after {
-  content:"";
+  content: "";
   display: block;
   position: absolute;
-  z-index:-1;
+  z-index: -1;
   top: 50%;
   width: 15%;
   right: 0;
@@ -157,29 +152,37 @@ body {
 .text1 {
   font-size: 120px;
 }
+
 .text2 {
   font-size: 169px;
 }
+
 .text3 {
   font-size: 50px;
 }
 
 .noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
 }
 
 .beanie-font {
-  font-family:"Reenie Beanie",arial,sans-serif;
+  font-family: "Reenie Beanie", arial, sans-serif;
 }
 
 .card-recommendation {
-  font-family:"Reenie Beanie",arial,sans-serif;
+  font-family: "Reenie Beanie", arial, sans-serif;
   max-width: 500px;
   min-width: 300px;
 }
@@ -210,81 +213,77 @@ body {
   }
 }
 
-
 .chevron {
-  animation: fade-slide-up 1s 1s ease-out forwards,
-  pulse 2s 3s ease-out infinite;
-opacity: 0;
+  animation: fade-slide-up 1s 1s ease-out forwards, pulse 2s 3s ease-out infinite;
+  opacity: 0;
 }
 
 .MuiGrid-item:nth-child(even) .card-recommendation {
-  -o-transform:rotate(4deg);
-  -webkit-transform:rotate(4deg);
-  -moz-transform:rotate(4deg);
-  position:relative;
-  top:5px;
-  background:#cfc;
+  -o-transform: rotate(4deg);
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  position: relative;
+  top: 5px;
+  background: #cfc;
   border-bottom-left-radius: 80px 10px;
 }
 
-.MuiGrid-item:nth-child(odd) .card-recommendation{
-
-  -o-transform:rotate(-2deg);
-  -webkit-transform:rotate(-2deg);
-  -moz-transform:rotate(-2deg);
-  position:relative;
-  top:-5px;
-  background:#ccf;
+.MuiGrid-item:nth-child(odd) .card-recommendation {
+  -o-transform: rotate(-2deg);
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  position: relative;
+  top: -5px;
+  background: #ccf;
 }
 
-.MuiGrid-item:first-child .card-recommendation{
+.MuiGrid-item:first-child .card-recommendation {
   border-bottom-right-radius: 800px 12px;
   border-bottom-left-radius: 60px 8px;
 }
 
-.MuiGrid-item:nth-child(2n) .card-recommendation{
+.MuiGrid-item:nth-child(2n) .card-recommendation {
   border-top-right-radius: 60px 8px;
 }
 
-.MuiGrid-item:nth-child(3n) .card-recommendation{
+.MuiGrid-item:nth-child(3n) .card-recommendation {
   border-bottom-right-radius: 60px 8px;
   border-top-right-radius: 60px 8px;
   border-top-left-radius: 60px 3px;
   border-bottom-left-radius: 60px 3px;
 }
 
-.MuiGrid-item:nth-child(4n) .card-recommendation{
+.MuiGrid-item:nth-child(4n) .card-recommendation {
   border-bottom-left-radius: 60px 8px;
 }
 
-.MuiGrid-item:nth-child(5n) .card-recommendation{
+.MuiGrid-item:nth-child(5n) .card-recommendation {
   border-bottom-right-radius: 80px 6px;
   border-bottom-left-radius: 60px 8px;
   border-top-right-radius: 140px 12px;
   border-top-left-radius: 60px 8px;
 }
 
-
-.MuiGrid-item:nth-child(6n) .card-recommendation{
+.MuiGrid-item:nth-child(6n) .card-recommendation {
   border-bottom-left-radius: 120px 20px;
 }
 
-.MuiGrid-item:nth-child(7n) .card-recommendation{
+.MuiGrid-item:nth-child(7n) .card-recommendation {
   border-bottom-right-radius: 60px 20px;
   border-bottom-left-radius: 120px 8px;
   border-top-left-radius: 120px 8px;
 }
 
-.MuiGrid-item:nth-child(8n) .card-recommendation{
+.MuiGrid-item:nth-child(8n) .card-recommendation {
   border-bottom-right-radius: 60px 20px;
   border-bottom-left-radius: 120px 8px;
 }
 
-.MuiGrid-item:nth-child(4n) .card-recommendation{
-  -o-transform:rotate(1.5deg);
-  -webkit-transform:rotate(1.5deg);
-  -moz-transform:rotate(1.5deg);
-  position:relative;
-  top:-5px;
-  background:#ffc;
+.MuiGrid-item:nth-child(4n) .card-recommendation {
+  -o-transform: rotate(1.5deg);
+  -webkit-transform: rotate(1.5deg);
+  -moz-transform: rotate(1.5deg);
+  position: relative;
+  top: -5px;
+  background: #ffc;
 }

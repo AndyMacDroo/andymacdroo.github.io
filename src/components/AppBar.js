@@ -46,11 +46,13 @@ class AppBar extends React.Component {
         {this.props.shouldShow && <MaterialUIAppBar elevation="elevation0" position="fixed" color="default"
           style={{ backgroundColor: 'transparent', color: '#4e4e4e' }}>
           <Toolbar>
-            <Zoom in={this.state.scrollPosition < 0.10 || (isMobile && this.state.scrollPosition < 0.001)}>
+            { !isMobile &&
+            <Zoom in={this.state.scrollPosition < 0.10}>
               <div style={{ marginLeft: 'auto', display: 'flex' }}>
                 <SocialLinks />
               </div>
             </Zoom>
+            }
           </Toolbar>
         </MaterialUIAppBar>
         }

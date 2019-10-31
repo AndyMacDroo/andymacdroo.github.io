@@ -26,7 +26,7 @@ class App extends React.Component {
   }
 
   getScrollPosition = () => {
-    return isMobile ? 480 : 2000
+    return isMobile ? 480 : 660
   }
 
   scrollToMyRef = () => window.scrollTo({
@@ -84,7 +84,7 @@ class App extends React.Component {
           <div style={{ position: 'relative', marginTop: `${isMobile ? '25%' : '10%'}`, height: 'auto' }}>
             <TechSkills />
             <Zoom in={this.state.scrollPosition < 0.70}>
-              <div>
+              <div style={{ marginTop: `${isMobile ? '-50px' : '-20px'}` }}>
                 <SectionImage />
                 {this.getIntroText()}
               </div>
