@@ -66,7 +66,7 @@ body {
 
 .shadow {
   color: #fff;
-  font-family: Arvo;
+  font-family: "Reenie Beanie", arial, sans-serif;
   font-weight: bold;
   text-shadow: -3px -3px 0 #4cbefc, 3px -3px 0 #4cbefc, -3px 3px 0 #4cbefc, 3px 3px 0 #4cbefc, 4px 4px 0 #36acfc, 5px 5px 0 #36acfc, 6px 6px 0 #36acfc, 7px 7px 0 #36acfc;
   line-height: 0.8em;
@@ -80,7 +80,7 @@ body {
 }
 
 .script {
-  font-family: "Seaweed Script";
+  font-family: "Reenie Beanie", arial, sans-serif;
   color: #fff;
   text-align: center;
   font-size: 40px;
@@ -116,10 +116,10 @@ body {
 }
 
 .bottom-script {
-  font-family: "Seaweed Script";
+  font-family: "Reenie Beanie", arial, sans-serif;
   color: #fff;
   text-align: center;
-  font-size: 40px;
+  font-size: 45px;
   position: relative;
   margin: 0;
 }
@@ -150,7 +150,8 @@ body {
 }
 
 .text1 {
-  font-size: 120px;
+  margin-top: -10px;
+  font-size: 230px;
 }
 
 .text2 {
@@ -158,7 +159,8 @@ body {
 }
 
 .text3 {
-  font-size: 50px;
+  margin-top: -40px;
+  font-size: 100px;
 }
 
 .noselect {
