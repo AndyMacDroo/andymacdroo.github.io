@@ -151,16 +151,19 @@ body {
 
 .text1 {
   margin-top: -10px;
-  font-size: 230px;
+  font-size: 225px;
+  text-align: center;
 }
 
 .text2 {
   font-size: 169px;
+  text-align: center;
 }
 
 .text3 {
   margin-top: -40px;
-  font-size: 100px;
+  font-size: 95px;
+  text-align: center;
 }
 
 .noselect {

@@ -26,12 +26,12 @@ class App extends React.Component {
   }
 
   getScrollPosition = () => {
-    return isMobile ? 480 : 660
+    return isMobile ? 480 : 715
   }
 
   scrollToMyRef = () => {
     window.scrollTo({
-      top: this.state.scrollPosition < 0.73 ? this.getScrollPosition() : 1,
+      top: this.state.scrollPosition < 0.70 ? this.getScrollPosition() : 1,
       behavior: 'smooth'
     })
     console.log("clicked");
@@ -82,7 +82,12 @@ class App extends React.Component {
   render() {
     ReactGA.pageview(window.location.pathname + window.location.search);
     return (
-      <div className="App">
+      <div style={{
+        backgroundColor: 'rgb(52, 173, 255)',
+        backgroundImage: 'linear-gradient(rgba(255,255,255,0.2) 2px, transparent 2px), linear-gradient(90deg, rgba(255,255,255,0.2) 2px, transparent 1px), linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)',
+        backgroundSize: '72px 72px, 72px 72px, 1px 18px, 18px 20px',
+        backgroundPosition: '-2px -2px, -2px -2px, -1px -1px, -1px -1px',
+      }} className="App">
         <GenericAppPage>
           <div style={{ position: 'relative', marginTop: `${isMobile ? '25%' : '10%'}`, height: 'auto' }}>
             <TechSkills />

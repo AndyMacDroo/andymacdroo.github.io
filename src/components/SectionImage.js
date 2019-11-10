@@ -2,6 +2,7 @@
 import React from 'react';
 import '../App.css';
 import PropTypes from 'prop-types';
+import { borderRadius } from 'polished';
 
 class SectionImage extends React.Component {
 
@@ -9,7 +10,7 @@ class SectionImage extends React.Component {
     const { shouldShow, imageHeight, imageSrc } = this.props;
     return (<div className="noselect" style={{ textAlign: 'center', position: 'relative' }} >
         {shouldShow && <div>
-          <img src={`${imageSrc}`} alt="section" style={{ height: `${imageHeight}px` }} />
+          <img src={`${imageSrc}`} alt="section" style={{ height: `${imageHeight}px`, borderRadius: '200px', border: '5px solid white' }} />
         </div>}
       </div>);
   }
@@ -18,7 +19,7 @@ class SectionImage extends React.Component {
 SectionImage.defaultProps = {
   shouldShow: true,
   imageHeight: 150,
-  imageSrc: "images/andy.png"
+  imageSrc: "images/andy.jpeg"
 }
 
 SectionImage.propTypes = {

@@ -37,7 +37,7 @@ GenericAppPage.propTypes = {
 };
 
 GenericAppPage.defaultProps = {
-  backgroundColor: 'white'
+  backgroundColor: 'none'
 }
 
 export default withStyles(styles)(GenericAppPage);

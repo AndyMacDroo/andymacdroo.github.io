@@ -16,10 +16,7 @@ class TechSkills extends React.Component {
         top: 0,
         left: 0,
         height: '200px',
-        backgroundColor: 'rgb(52, 173, 255)',
-        backgroundImage: 'linear-gradient(rgba(255,255,255,0.2) 2px, transparent 2px), linear-gradient(90deg, rgba(255,255,255,0.2) 2px, transparent 1px), linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)',
-        backgroundSize: '100px 100px, 100px 100px, 20px 20px, 20px 20px',
-        backgroundPosition: '-2px -2px, -2px -2px, -1px -1px, -1px -1px',
+        background: 'rgba(0,0,0,0)',
         opacity: 1
       }}
       params={{
